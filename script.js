@@ -1,3 +1,15 @@
+//home -> home-content -> text-two -> auto-input
+var typed = new Typed('.auto-input', {
+  strings: [
+    'Juneyong Lee',
+    '컴퓨터전자시스템공학과',
+    '201904458',
+    'Juneyong Lee',
+  ],
+  typeSpeed: 100,
+  backSpeed: 100,
+  loop: true,
+})
 // Sticky Navigation Menu JS Code
 let nav = document.querySelector('nav')
 let scrollBtn = document.querySelector('.scroll-button a')
@@ -64,4 +76,20 @@ $(window).scroll(function () {
   $('#sidebox')
     .stop()
     .animate({ top: position + currentPosition + 'px' }, 1000)
+})
+
+// slick
+$('.autoplay').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+})
+
+$('.fade').slick({
+  dots: true,
+  infinite: true,
+  speed: 500,
+  fade: true,
+  cssEase: 'linear',
 })
